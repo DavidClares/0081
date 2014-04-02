@@ -16,7 +16,7 @@ public class SupportSystem
 {
     private InputReader reader;
     private Responder responder;
-
+    
     /**
      * Creates a technical support system.
      */
@@ -68,8 +68,6 @@ public class SupportSystem
      */
     private void printGoodbye()
     {
-        System.out.println("Nice talking to you. Bye...");}}
-
-
-
-                    
+        System.out.println("Nice talking to you. Bye...");
+    }
+}
