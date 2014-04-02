@@ -1,3 +1,4 @@
+import java.util.HashSet;
 /**
  * This class implements a technical support system. It is the top
  * level class in this project. The support system communicates via
@@ -8,14 +9,14 @@
  * It contains a loop that repeatedly reads input and generates output
  * until the users wants to leave.
  * 
- * @author     Michael Kölling and David J. Barnes
+ * @author     Michael KÃ¶lling and David J. Barnes
  * @version    0.1 (2011.07.31)
  */
 public class SupportSystem
 {
     private InputReader reader;
     private Responder responder;
-    
+
     /**
      * Creates a technical support system.
      */
@@ -37,13 +38,13 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput();
-            
-            if(input.toLowerCase().trim().equals("bye")) {
+            HashSet<String> userInput = reader.getInput();
+
+            if(userInput.contains("bye")) {
                 finished = true;
             }
             else {
-                String response = responder.generateResponse(input);
+                String response = responder.generateResponse(userInput);
                 System.out.println(response);
             }
         }
@@ -67,6 +68,8 @@ public class SupportSystem
      */
     private void printGoodbye()
     {
-        System.out.println("Nice talking to you. Bye...");
-    }
-}
+        System.out.println("Nice talking to you. Bye...");}}
+
+
+
+                    
